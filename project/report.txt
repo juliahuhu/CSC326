@@ -1,0 +1,66 @@
+A report describing the objective, design, test results, roles played by each team member, and a discussion of
+lessons learned. How did the material from the course help you with the project? Did any parts take you longer
+than you thought? Why? Would you do the project differently if you had to do it again? What would you do
+if you had more time? What was your testing strategy during development? It is important that the names and
+student numbers of all member are specified in the beginning of the report.
+
+
+Yu Guang Thien		998458413		yuguang.thien@utoronto.ca
+Christian Sangle	998158425		christian.sangle@utoronto.ca
+
+
+
+Objective:
+For our project, we have decided to implement a search engine for information on the great game dota2. 
+
+Design:
+We will have the main page where users input their search keyword. When they hit the search button, we will redirect the users to a results page, ranked in descending order of relevance according to their search keyword. 
+
+Functionalities:
+1. If no search keyword is entered, redirect user to an empty page, prompting for input search keyword
+2. Displays only 10 results in each search result page
+3. Displays search results with the title only. Clicking on the title will redirect users to the actual links
+4. Previous page links and next page links that redirect users to the corresponding page of results
+
+Test Results:
+NOTE: ALL SCREENSHOTS REFERENCED ARE IN FOLDER "resulting searches"
+
+Things that we wanted to test for was stability of our search engine. So one thing we wanted to test for was to make sure that it can handle a search of one word (Screenshot "genericsearch.png" and Screenshot "genericsearch2.png"). We decided to use the word "all" and "hello because they are common words that it can appear on most web pages but not all. However, when searching for the words at the same time will yield no results because our search engine only supports one word (Screenshot "only1string.png"). Also, from this test we were also able to test the functionality of our next and previous page feature which is that the feature will go to the next page of results or previous page of results. In addition, we were also able to test if you are on the first page, you can not go to previous results and if you are on the last page you can not go to next page (Screenshot "nonext.png" and Screenshot"noprev.png"). The testing of the next and prev button were also recorded, however the video came out extremely poor and I would recommend doing a search and try it out for yourself.
+
+Next we wanted to test if it can handle generic words that will appear on all sites such as "the" (Screenshot "unsupportedword.png"). Here we can see that the search returns nothing, because our search engine does not support searching for those types of words, thus it returns no results. This is similar to the the test where we search for just a single letter 'a', and once again it returns nothing because our search does not accept this feature (Screenshot "letter").
+
+Next we wanted to test if the user did not enter anything into the search they would be redirected to another page that tells them to go back and enter something, (Screenshot "empty.char")
+
+Next we wanted to test if the user were to enter a value that contained no character, or only used symbols (Screenshot "nonchar.char"). Also, related to this test we wanted to test a mix of characters that contain numbers,words,and symbols (Screenshot "mixofchar.char"). Thus, from our two tests here  we can see that our search engine succeeds in returning no results for it because it does not support this feature.
+
+Lastly, we wanted to test to make sure that the user is inputting their searches in english. Since our search engine can only support english words. And our search engine was successful in returning nothing for all cases of non-english results (Screenshot "chinese" and Screenshot "spanish" and Screenshot"rollface.char")
+
+Roles of Members:
+Yu Guang Thien:		Front end and report
+Christian Sangle:	Back end and unit testing
+
+Lessons Learned:
+We have learned to use HTML effectively to display interesting web pages.
+We have also learned to utilize many of the python functionalities such as numpy, bottle, BeautifulSoup, redis, etc.
+We have learned to start the project early and divide the jobs equally, maximizing the overall efficiency of the team.
+We have learned the effectiveness of dictionaries, the ability to turn dictionaries into a list of key value pairs, and how these data structures simplify the coding and make it much nicer to code in then in C.
+We also learned a lot about pagerank, and web crawlers, which is something that is used in industry in search engines, and it was quite interesting to see how these ideas are implemented in code.
+
+How did the material from the course help you with the project? 
+The material from the course helped us a lot in the backend part of the assignment. Sequences and sequence manipulation techniques are crucial to format the input and outputs in the way we want them to be in. Dictionaries are the best sequence there is! For the frontend part of the assignment, the material covered in the tutorials are very useful to us. We are able to complete the frontend with the knowledge in Bottle and HTML. We have also learned some materials such as unit-testing which is not covered in the lecture to complete the assignment. 
+
+Did any parts take you longer than you thought? Why? 
+There are three parts that took longer than we expected. 
+The first part is getting the next page and previous page functionality in the frontend to work. We first tried to use post buttons for them, but we would lose the keyword that we are searching for when we redirect them to a certain webpage. Then we tried to store the keyword in the cookies, but that did not work out as well too. Finally, we got it to work by storing the keyword and page number in the url itself. Directing from a webpage to another webpage will not lose the keyword that we are searching for. This took longer that expected probably because of our low knowledge in web-programming. 
+The second part that took longer than expected is to understand the crawler. We have to run and experiment with the crawler to understand what each function and each variable does. When we ran the crawler with the given sets of urls, it came across some HTML tags that causes it to crash. We have to fix that too. This took longer that expected probably because we have to look at several python packages that are not introduced in class such as BeautifulSoup and collection.
+The third part that took longer then expected was the formatting of the backend. Since the id's of where the word was found is an integer, but the database is only strings. To slice the key value pair to get the id, then converting that string to an integer caused a lot of problems. Especially since python slicing method, includes the beginning of the string and does not include end of the string.
+
+Would you do the project differently if you had to do it again? 
+We started the project as soon as we got the project description. We poured in significant amount of work and time into the project. In the end, we managed to come up with a pretty awesome search engine called The Windrunner. If we had to do it again, we would not do anything differently.
+
+What would you do if you had more time? 
+If we were given more time, we would probably enhance the appearance of our webpage a bit and offer more functionality such as capability to support multiple keyword search and case sensitive keyword search. 
+
+What was your testing strategy during development? 
+
+For the testing strategy, we come out with a unit test case when we thought of a functionality that out project would have. Examples are click a button to submit a search keyword, search results' previous page links and next page links, sending search keyword from frontend to backend, page ranking several urls and crawling the web with given a list of urls. This was all done by starting our search engine and handling each case one by one by makign searches that conform to what we wanted to see.

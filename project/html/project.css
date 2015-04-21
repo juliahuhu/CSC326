@@ -1,0 +1,66 @@
+body
+{
+	background-color:rgb(225,255,225);
+}
+
+
+.background
+{
+	background-image: url("http://images.blogskins.com/skin_images/254/491/images/paper.gif");
+	background-color:rgb(225,255,255);
+	background-position: 50% 50%;
+	background-attachment:fixed;
+	width: 1200px;
+	height: 800px;
+}
+
+.icon
+{
+	height:200px;
+	width:200px;
+	align:middle;
+	position:absolute;
+	top:160px;
+	left:800px;
+}
+
+.small
+{
+	width: 100px;
+	height: 100px;
+}
+
+
+.word
+{
+	font-size: 40px;
+	position:fixed;
+	top:100px;
+	left:350px;
+}
+
+.subtitle
+{
+	font-size: 20px;
+	position:fixed;
+	top:300px;
+	left:400px;
+}
+
+.tm
+{
+	font-size: 10px;
+	position:fixed;
+	top:800px;
+	left:450px;
+}
+
+
+.text
+{
+	font-size: 20px;
+	position:fixed;
+	top:200px;
+	left:400px;
+}
+
